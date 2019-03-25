@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.SceneManagement;
 
 public class AsciiLevelLoader : MonoBehaviour
 {
@@ -88,7 +89,8 @@ public class AsciiLevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("r"))
+            SceneManager.LoadScene(0);
     }
 
     

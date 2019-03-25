@@ -9,7 +9,7 @@ public class ResetGame : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody2D myRB;
-    public Text StateText;
+    private Text StateText;
     
     private void Start()
     {
@@ -18,8 +18,7 @@ public class ResetGame : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("r"))
-            SceneManager.LoadScene(0);
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,7 +35,8 @@ public class ResetGame : MonoBehaviour
             StateText.text = "You Win!";
             Destroy(other.gameObject);
             Destroy(GetComponent<PlayerMovement>());
-            Destroy(myRB);
+            Destroy(GetComponent<BoxCollider2D>());
+            Destroy(GetComponent<BoxCollider2D>());
         }
         
     }
