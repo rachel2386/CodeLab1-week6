@@ -64,6 +64,9 @@ public class AsciiLevelLoader : MonoBehaviour
                    case'T':
                        tile =  Instantiate(Resources.Load<GameObject>("Trap"));
                        break;
+                   case'M':
+                       tile =  Instantiate(Resources.Load<GameObject>("MovingTrap"));
+                       break;
                    default:
                        tile = null;
                        break;
